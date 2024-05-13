@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Backdrop,
   Box,
   IconButton,
   Toolbar,
@@ -18,9 +19,9 @@ import {
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
-const SearchDialog = lazy(() => import("../../specific/Search"));
-const NotificatiomsDialog = lazy(() => import("../../specific/Notifications"));
-const NewHGroupDialog = lazy(() => import("../../specific/NewGroups"));
+const SearchDialog = lazy(() => import("../specific/Search"));
+const NotificatiomsDialog = lazy(() => import("../specific/Notifications"));
+const NewHGroupDialog = lazy(() => import("../specific/NewGroups"));
 
 const Header = () => {
   const navigate = useNavigate();
@@ -118,17 +119,17 @@ const Header = () => {
       </Box>
 
       {isSearch && (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Backdrop open />}>
           <SearchDialog />
         </Suspense>
       )}
       {isNotification && (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Backdrop open />}>
           <NotificatiomsDialog />
         </Suspense>
       )}
       {isNewGroup && (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Backdrop open />}>
           <NewHGroupDialog />
         </Suspense>
       )}
