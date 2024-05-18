@@ -1,6 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React, { memo } from "react";
 import { Link } from "../components/styles/StyledComponents";
+import AvatarCard from "./AvatarCard";
 
 const ChatItem = ({
   avatar = [],
@@ -30,7 +31,7 @@ const ChatItem = ({
           position: "relative",
         }}
       >
-        {/* AVATAR CARD */}
+        <AvatarCard avatar={avatar} />
 
         <Stack>
           <Typography>{name}</Typography>
