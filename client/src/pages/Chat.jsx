@@ -32,7 +32,7 @@ const Chat = () => {
         sx={{ overflowX: "hidden", overflowY: "auto" }}
       >
         {sampleMessage.map((i) => (
-          <MessageComponent message={i} user={user} />
+          <MessageComponent key={i._id} message={i} user={user} />
         ))}
       </Stack>
 
@@ -43,6 +43,7 @@ const Chat = () => {
           padding={"1rem"}
           alignItems={"center"}
           position={"relative"}
+          bgcolor={"#FDC2F1"}
         >
           <IconButton
             sx={{ position: "absolute", left: "1.5rem", rotate: "30deg" }}
