@@ -5,6 +5,7 @@ import { Grid } from "@mui/material";
 import ChatList from "../specific/ChatList";
 import { sampleChats } from "../../constants/sampleData";
 import { useParams } from "react-router-dom";
+import Profile from "../specific/Profile";
 
 const AppLayout = () => (WrappedComponent) => {
   return (props) => {
@@ -28,6 +29,7 @@ const AppLayout = () => (WrappedComponent) => {
             md={3}
             sx={{ display: { xs: "none", sm: "block" } }}
             height={"100%"}
+            bgcolor="#F3D8F8"
           >
             <ChatList
               chats={sampleChats}
@@ -37,15 +39,7 @@ const AppLayout = () => (WrappedComponent) => {
               handleDeleteChat={handleDeleteChat}
             />
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={8}
-            md={5}
-            lg={6}
-            height={"100%"}
-            bgcolor="primary.main"
-          >
+          <Grid item xs={12} sm={8} md={5} lg={6} height={"100%"}>
             <WrappedComponent {...props} />
           </Grid>
           <Grid
@@ -60,7 +54,7 @@ const AppLayout = () => (WrappedComponent) => {
             }}
             height={"100%"}
           >
-            third
+            <Profile />
           </Grid>
         </Grid>
       </>

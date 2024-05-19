@@ -13,11 +13,22 @@ export const VisuallyHiddenInput = styled("input")({
   width: 1,
 });
 
+// fontWeight: 600,
 export const Link = styled(LinkComponent)`
   text-decoration: none;
-  color: #efaece;
-  padding: 1rem;
+  color: black;
+
   &:hover {
     background-color: #f0f0f0;
   }
+`;
+
+export const InputBox = styled("input")`
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 3rem;
+  border-radius: 1.5rem;
+  background-color: #cec7e8;
 `;
