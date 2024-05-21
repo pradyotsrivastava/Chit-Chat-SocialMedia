@@ -13,13 +13,14 @@ import {
   Menu,
 } from "@mui/icons-material";
 import { matBlack } from "../constants/color";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Link } from "../components/styles/StyledComponents";
 import AvatarCard from "../shared/AvatarCard";
 import { sampleChats } from "../constants/sampleData";
 
 const Groups = () => {
-  const chatId = "asbd";
+  const chatId = useSearchParams()[0].get("groups");
+  console.log(chatId);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navigate = useNavigate();
@@ -98,7 +99,7 @@ const Groups = () => {
         open={isMobileMenuOpen}
         onClose={handleMobileClose}
       >
-        <GroupsList w={"50vw"} />
+        <GroupsList w={"50vw"} myGroups={sampleChats} chatId={chatId} />
       </Drawer>
     </Grid>
   );
@@ -129,7 +130,12 @@ const GroupListItem = memo(({ group, chatId }) => {
   const { name, avatar, _id } = group;
 
   return (
-    <Link to={`?groups=${_id}`}>
+    <Link
+      to={`?groups=${_id}`}
+      onClick={(e) => {
+        if (chatId === _id) e.preventDefault();
+      }}
+    >
       <Stack
         direction={"row"}
         spacing={"1rem"}
