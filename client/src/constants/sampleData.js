@@ -27,6 +27,48 @@ export const sampleChats = [
     groupChat: true,
     members: ["4", "2", "3"],
   },
+  {
+    avatar: ["https://www.w3schools.com/w3images/avatar2.png"],
+    name: "Roman Reigns",
+    _id: "2",
+    groupChat: true,
+    members: ["2", "3", "4"],
+  },
+  {
+    avatar: ["https://www.w3schools.com/w3images/avatar2.png"],
+    name: "Seth Rollins",
+    _id: "3",
+    groupChat: true,
+    members: ["3", "4", "2"],
+  },
+  {
+    avatar: ["https://www.w3schools.com/w3images/avatar2.png"],
+    name: "Dean Ambrose",
+    _id: "4",
+    groupChat: true,
+    members: ["4", "2", "3"],
+  },
+  {
+    avatar: ["https://www.w3schools.com/w3images/avatar2.png"],
+    name: "Roman Reigns",
+    _id: "2",
+    groupChat: true,
+    members: ["2", "3", "4"],
+  },
+  {
+    avatar: ["https://www.w3schools.com/w3images/avatar2.png"],
+    name: "Seth Rollins",
+    _id: "3",
+    groupChat: true,
+    members: ["3", "4", "2"],
+  },
+  {
+    avatar: ["https://www.w3schools.com/w3images/avatar2.png"],
+    name: "Dean Ambrose",
+    _id: "4",
+    groupChat: true,
+    members: ["4", "2", "3"],
+  },
 ];
 
 export const sampleUsers = [
