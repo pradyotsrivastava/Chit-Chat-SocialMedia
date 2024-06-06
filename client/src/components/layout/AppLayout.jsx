@@ -22,7 +22,7 @@ const AppLayout = () => (WrappedComponent) => {
         <Title />
         <Header />
 
-        <Grid container height={"calc(100vh)"}>
+        <Grid container height={"calc(93.3vh)"}>
           <Grid
             item
             sm={4}
