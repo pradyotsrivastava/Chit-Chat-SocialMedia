@@ -3,7 +3,7 @@
 // efaece - Left Side bar
 
 export const center = "#FDC2F1";
-
+export const send = "#EB5ACE";
 export const sidebar = "#efaece";
 export const mainContent = "#FDC2F1";
 
